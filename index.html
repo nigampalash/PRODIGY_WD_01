@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Interactive Navigation Menu Demo</title>
+  <title>MakeMyTrip - Task 1</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav id="mainNav">
     <ul>
       <li><a href="#" id="homeLink">Home</a></li>
@@ -16,66 +16,100 @@
       <li><a href="#" id="contactLink">Contact</a></li>
     </ul>
   </nav>
-  <main>
-    <section id="contentSection" style="height: 1200px; padding-top: 80px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <h1 id="mainHeading" style="font-size: 3.5rem; color: #ffd600; text-align: center; margin-top: 100px;">Welcome to Task 1</h1>
-    </section>
-  </main>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Book Flights, Hotels & Holidays with <span class="brand">MakeMyTrip</span></h1>
+      <p class="hero-desc">Your one-stop travel portal for the best deals and seamless booking experience.</p>
+      <form class="search-form">
+        <input type="text" placeholder="From (City/Airport)" required>
+        <input type="text" placeholder="To (City/Airport)" required>
+        <input type="date" required>
+        <button type="submit"><i class="fas fa-search"></i> Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Featured Destinations -->
+  <section class="destinations-section">
+    <h2>Popular Destinations</h2>
+    <div class="destinations-list">
+      <div class="destination-card">
+        <img src="goa.jpg.jpg" alt="Goa Beach">
+        <div class="dest-info">
+          <h3>Goa</h3>
+          <p>Sun, sand, and sea. Perfect for your next holiday!</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="paris.jpg.jpg" alt="Paris">
+        <div class="dest-info">
+          <h3>Paris</h3>
+          <p>The city of lights, romance, and culture.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="dubai.jpg.jpg" alt="Dubai">
+        <div class="dest-info">
+          <h3>Dubai</h3>
+          <p>Luxury shopping, ultramodern architecture, and vibrant nightlife.</p>
+        </div>
+      </div>
+      <div class="destination-card">
+        <img src="bali.jpg.jpg" alt="Bali">
+        <div class="dest-info">
+          <h3>Bali</h3>
+          <p>Explore tropical paradise and serene beaches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="aboutSection">
+    <h2>About MakeMyTrip Clone</h2>
+    <p>
+      This is a demo clone of MakeMyTrip, built for Task 1. It features a modern UI, glowing navbar, hero section, search form, and popular destinations. 
+      You can extend it with real APIs, login/signup, and booking features.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contactSection">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+    </form>
+    <div class="contact-social">
+      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 MakeMyTrip | Designed by Palash Nigam Khare
+  </footer>
+
   <script src="menu.js"></script>
   <script>
-    // Dynamic content for each section
-    const contentSection = document.getElementById('contentSection');
-    const homeContent = `
-      <h1 id="mainHeading" style="font-size: 3.5rem; color: #ffd600; text-align: center; margin-top: 100px;">Welcome to Task 1</h1>
-    `;
-    const aboutContent = `
-      <h2 style="color:#ffd600; font-size:2.2rem; margin-bottom: 1rem;">About This Project</h2>
-      <p style="max-width:600px; font-size:1.25rem; color:#fff; text-align:center;">
-        This project demonstrates a professional, interactive navigation menu using HTML, CSS, and JavaScript. 
-        The menu is fixed, changes style on scroll and hover, and dynamically updates the main content area 
-        without reloading the page. The Contact section includes social links with icons.
-      </p>
-    `;
-    const contactContent = `
-      <h2 style="color:#ffd600; font-size:2.2rem; margin-bottom: 1rem;">Contact Me</h2>
-      <div style="display:flex; flex-direction:column; align-items:center; gap:1.2em;">
-        <a href="https://instagram.com/nigam_palash" target="_blank" style="color:#fff; font-size:1.3rem; text-decoration:none;">
-          <i class="fab fa-instagram" style="color:#E4405F; font-size:2rem; vertical-align:middle;"></i>
-          <span style="margin-left:0.5em;">@nigam_palash</span>
-        </a>
-        <a href="https://www.linkedin.com/in/palash-nigam-khare" target="_blank" style="color:#fff; font-size:1.3rem; text-decoration:none;">
-          <i class="fab fa-linkedin" style="color:#0077b5; font-size:2rem; vertical-align:middle;"></i>
-          <span style="margin-left:0.5em;">Palash Nigam Khare</span>
-        </a>
-        <a href="https://github.com/nigampalash" target="_blank" style="color:#fff; font-size:1.3rem; text-decoration:none;">
-          <i class="fab fa-github" style="color:#fff; font-size:2rem; vertical-align:middle;"></i>
-          <span style="margin-left:0.5em;">nigampalash</span>
-        </a>
-        <a href="mailto:nigampalash@gmail.com" style="color:#fff; font-size:1.3rem; text-decoration:none;">
-          <i class="fas fa-envelope" style="color:#ffd600; font-size:2rem; vertical-align:middle;"></i>
-          <span style="margin-left:0.5em;">nigampalash@gmail.com</span>
-        </a>
-      </div>
-    `;
-
-    // Navigation click handlers
-    document.getElementById('homeLink').onclick = function(e) {
-      e.preventDefault();
-      contentSection.innerHTML = homeContent;
-      contentSection.style.justifyContent = "center";
-      contentSection.style.alignItems = "center";
-    };
+    // Smooth scroll for nav links
     document.getElementById('aboutLink').onclick = function(e) {
       e.preventDefault();
-      contentSection.innerHTML = aboutContent;
-      contentSection.style.justifyContent = "center";
-      contentSection.style.alignItems = "center";
+      document.getElementById('aboutSection').scrollIntoView({behavior: 'smooth'});
     };
     document.getElementById('contactLink').onclick = function(e) {
       e.preventDefault();
-      contentSection.innerHTML = contactContent;
-      contentSection.style.justifyContent = "flex-start";
-      contentSection.style.alignItems = "center";
+      document.getElementById('contactSection').scrollIntoView({behavior: 'smooth'});
+    };
+    document.getElementById('homeLink').onclick = function(e) {
+      e.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'});
     };
   </script>
 </body>
